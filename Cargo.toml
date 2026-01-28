@@ -1,0 +1,21 @@
+[package]
+name = "simple-chat"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.49", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[lib]
+name = "simple_chat"
+path = "src/lib.rs"
+
+[[bin]]
+name = "chat-server"
+path = "src/server/main.rs"
+
+[[bin]]
+name = "chat-client"
+path = "src/client/main.rs"
