@@ -1,11 +1,18 @@
+use std::sync::Arc;
+
 use tokio::io::{AsyncBufReadExt, BufReader};
 use tokio::net::TcpStream;
+use tokio::sync::Mutex;
 
+use crate::server::state::ServerState;
 use crate::transport::messages::ClientMessage;
 
-pub async fn handle_connection(stream: TcpStream) -> anyhow::Result<()> {
+pub async fn handle_connection(
+    stream: TcpStream,
+    _state: Arc<Mutex<ServerState>>,
+) -> anyhow::Result<()> {
     let peer = stream.peer_addr()?;
-
+    // todo: Use the server state for adding users;;;
     let reader = BufReader::new(stream);
     let mut lines = reader.lines();
 

@@ -4,14 +4,10 @@ use serde::{Deserialize, Serialize};
 #[serde(tag = "type")]
 pub enum ClientMessage {
     #[serde(rename = "join")]
-    Join {
-        username: String,
-    },
+    Join { username: String },
 
     #[serde(rename = "send")]
-    Send {
-        msg: String,
-    },
+    Send { msg: String },
 
     #[serde(rename = "leave")]
     Leave,
@@ -21,13 +17,8 @@ pub enum ClientMessage {
 #[serde(tag = "type")]
 pub enum ServerMessage {
     #[serde(rename = "message")]
-    Message {
-        from: String,
-        msg: String,
-    },
+    Message { from: String, msg: String },
 
     #[serde(rename = "error")]
-    Error {
-        msg: String,
-    },
+    Error { msg: String },
 }

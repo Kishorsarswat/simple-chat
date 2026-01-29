@@ -22,8 +22,8 @@
 ---
 
 ## 4: Server state Management
-- [ ] Add shared server state (connected users)
-- [ ] Store per-user message channels
+- [x] Add shared server state (connected users)
+- [x] Store per-user message channels
 
 ---
 
