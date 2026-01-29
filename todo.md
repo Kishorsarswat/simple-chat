@@ -8,16 +8,16 @@
 ---
 
 ## 2: Server networking skeleton
-- [ ] Create TCP listener
-- [ ] Accept incoming connections
-- [ ] Spawn per-connection tasks
-- [ ] Handle client disconnects
+- [x] Create TCP listener
+- [x] Accept incoming connections
+- [x] Spawn per-connection tasks
+- [x] Handle client disconnects
 
 ---
 
 ## 3: Connection framing & message parsing
-- [ ] Parse client messages
-- [ ] Detect EOF and cleanup connection
+- [x] Parse client messages
+- [x] Detect EOF and cleanup connection
 
 ---
 
